@@ -1,0 +1,35 @@
+{
+  "name": "nexus-finance-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev:web & npm run dev:api",
+    "dev:web": "npm run dev --workspace=@nexus/web",
+    "dev:api": "npm run dev --workspace=@nexus/api",
+    "build": "npm run build --workspace=@nexus/web",
+    "build:api": "npm run build --workspace=@nexus/api",
+    "preview": "npm run preview --workspace=@nexus/web",
+    "db:generate": "npm run db:generate --workspace=@nexus/api",
+    "db:migrate": "npm run db:migrate --workspace=@nexus/api",
+    "db:seed": "npm run db:seed --workspace=@nexus/api",
+    "db:studio": "npm run db:studio --workspace=@nexus/api"
+  },
+  "keywords": [
+    "finance",
+    "dashboard",
+    "react",
+    "vite",
+    "monorepo",
+    "nexus"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "drizzle-kit": "^0.31.10",
+    "drizzle-orm": "^0.45.2"
+  }
+}

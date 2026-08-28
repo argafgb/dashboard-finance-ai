@@ -1,0 +1,90 @@
+/* ========================================
+   DESIGN TOKENS — Dashboard Finance AI
+   ======================================== */
+
+:root {
+  /* ── Background Colors ── */
+  --bg-primary:      #0a0a0f;
+  --bg-secondary:    #12121a;
+  --bg-tertiary:     #1a1a2e;
+  --bg-hover:        #22223a;
+  --bg-input:        #16162a;
+
+  /* ── Accent Colors ── */
+  --accent-green:    #00d68f;
+  --accent-green-dim: rgba(0, 214, 143, 0.15);
+  --accent-red:      #ff6b6b;
+  --accent-red-dim:  rgba(255, 107, 107, 0.15);
+  --accent-blue:     #4c9aff;
+  --accent-blue-dim: rgba(76, 154, 255, 0.15);
+  --accent-purple:   #a855f7;
+  --accent-purple-dim: rgba(168, 85, 247, 0.15);
+  --accent-yellow:   #fbbf24;
+
+  /* ── Text Colors ── */
+  --text-primary:    #f0f0f5;
+  --text-secondary:  #8888a0;
+  --text-tertiary:   #555570;
+  --text-inverse:    #0a0a0f;
+
+  /* ── Border & Surface ── */
+  --border:          #2a2a3e;
+  --border-focus:    #4c9aff;
+  --glass:           rgba(255, 255, 255, 0.04);
+  --glass-strong:    rgba(255, 255, 255, 0.08);
+
+  /* ── Typography ── */
+  --font-family:     'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --fs-display:      2.25rem;
+  --fs-h1:           1.5rem;
+  --fs-h2:           1.125rem;
+  --fs-body:         0.875rem;
+  --fs-caption:      0.75rem;
+  --fw-regular:      400;
+  --fw-medium:       500;
+  --fw-semibold:     600;
+  --fw-bold:         700;
+  --lh-tight:        1.2;
+  --lh-normal:       1.5;
+  --lh-relaxed:      1.75;
+
+  /* ── Spacing ── */
+  --space-xs:        4px;
+  --space-sm:        8px;
+  --space-md:        16px;
+  --space-lg:        24px;
+  --space-xl:        32px;
+  --space-2xl:       48px;
+
+  /* ── Border Radius ── */
+  --radius-sm:       6px;
+  --radius-md:       12px;
+  --radius-lg:       16px;
+  --radius-xl:       24px;
+  --radius-full:     9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm:       0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-card:     0 4px 24px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 8px 40px rgba(0, 0, 0, 0.4);
+  --shadow-glow-green: 0 0 20px rgba(0, 214, 143, 0.15);
+  --shadow-glow-red:   0 0 20px rgba(255, 107, 107, 0.15);
+  --shadow-glow-blue:  0 0 20px rgba(76, 154, 255, 0.15);
+
+  /* ── Transitions ── */
+  --transition-fast:   all 0.15s ease;
+  --transition:        all 0.2s ease;
+  --transition-slow:   all 0.3s ease;
+
+  /* ── Layout ── */
+  --sidebar-width:       260px;
+  --sidebar-collapsed:   68px;
+  --header-height:       0px;
+  --content-max-width:   1200px;
+
+  /* ── Z-Index ── */
+  --z-sidebar:     100;
+  --z-modal:       200;
+  --z-toast:       300;
+  --z-overlay:     150;
+}

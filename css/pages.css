@@ -1,0 +1,241 @@
+/* ========================================
+   PAGE-SPECIFIC STYLES
+   ======================================== */
+
+/* ── Login Page ── */
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--glass-strong);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  position: relative;
+  z-index: 1;
+  animation: scaleIn 0.4s ease;
+}
+
+.login-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.login-logo .logo-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--accent-green), var(--accent-blue));
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.login-logo h1 {
+  font-size: var(--fs-h2);
+  text-align: center;
+}
+
+.login-logo p {
+  font-size: var(--fs-body);
+  text-align: center;
+}
+
+.login-form .form-group {
+  margin-bottom: var(--space-md);
+}
+
+.login-form .btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: var(--space-sm);
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper .input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-tertiary);
+  pointer-events: none;
+}
+
+.input-wrapper .form-input {
+  padding-left: 38px;
+}
+
+.input-wrapper .toggle-password {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  padding: 6px;
+  transition: var(--transition-fast);
+}
+
+.input-wrapper .toggle-password:hover {
+  color: var(--text-primary);
+}
+
+/* ── Dashboard Page ── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.dashboard-chart-line {
+  margin-bottom: var(--space-xl);
+}
+
+.dashboard-chart-line .card {
+  padding: var(--space-lg);
+}
+
+.chart-container-line {
+  position: relative;
+  height: 300px;
+  margin-top: var(--space-md);
+}
+
+.dashboard-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.chart-container {
+  position: relative;
+  height: 200px;
+  margin-top: var(--space-md);
+}
+
+.recent-table-wrapper {
+  margin-top: var(--space-md);
+}
+
+.view-all-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  color: var(--accent-blue);
+  margin-top: var(--space-md);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.view-all-link:hover {
+  color: var(--text-primary);
+  gap: var(--space-sm);
+}
+
+/* ── Transaction Form Page ── */
+.transaction-form-card {
+  max-width: 640px;
+}
+
+.transaction-form-card .card {
+  padding: var(--space-xl);
+}
+
+/* ── Ledger Page ── */
+.ledger-table-wrapper {
+  overflow-x: auto;
+}
+
+.ledger-table-wrapper .data-table {
+  min-width: 700px;
+}
+
+.amount-cell {
+  font-weight: var(--fw-semibold);
+  font-variant-numeric: tabular-nums;
+}
+
+.amount-cell.income {
+  color: var(--accent-green);
+}
+
+.amount-cell.expense {
+  color: var(--accent-red);
+}
+
+.description-cell {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Categories Page ── */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.category-empty {
+  padding: var(--space-xl);
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: var(--fs-body);
+}
+
+/* ── Responsive adjustments ── */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dashboard-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-container-line {
+    height: 220px;
+  }
+
+  .login-card {
+    margin: var(--space-md);
+    padding: var(--space-lg);
+  }
+
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-bar .form-input,
+  .filter-bar .form-select {
+    min-width: 100%;
+  }
+
+  .stat-card .stat-value {
+    font-size: 1.5rem;
+  }
+}
